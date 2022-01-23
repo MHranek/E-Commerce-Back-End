@@ -16,14 +16,14 @@ Category.hasMany(Product, {
 });
 
 // TODO Products belongToMany Tags (through ProductTag)
-// Product.belongsToMany(Tag, {
-
-// });
+Product.belongsToMany(Tag, {
+  through: ProductTag
+});
 
 // TODO Tags belongToMany Products (through ProductTag)
-// Tag.belongsToMany(Product, {
-
-// });
+Tag.belongsToMany(Product, {
+  through: ProductTag
+});
 
 module.exports = {
   Product,
