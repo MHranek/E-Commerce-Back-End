@@ -15,12 +15,12 @@ Category.hasMany(Product, {
   onDelete: 'CASCADE',
 });
 
-// TODO Products belongToMany Tags (through ProductTag)
+// Products belongToMany Tags (through ProductTag)
 Product.belongsToMany(Tag, {
   through: ProductTag
 });
 
-// TODO Tags belongToMany Products (through ProductTag)
+// Tags belongToMany Products (through ProductTag)
 Tag.belongsToMany(Product, {
   through: ProductTag
 });
